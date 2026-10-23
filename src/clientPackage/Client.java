@@ -1,5 +1,5 @@
 package clientPackage;
-
+import calcul.Calcul;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -16,20 +16,19 @@ public class Client {
 
         System.out.println("j' suis un client connecté");
         Scanner sc=new Scanner(System.in);
-        PrintWriter pw=new PrintWriter(socket.getOutputStream(),true);
+        ObjectOutputStream oos=new ObjectOutputStream(socket.getOutputStream());
         BufferedReader bf=new BufferedReader(new InputStreamReader(socket.getInputStream()));
         int nb;
         String op;
         int nb2;
         int res;
+        Calcul operation;
         do{
             nb=sc.nextInt();
             op=sc.next();
             nb2=sc.nextInt();
-
-            pw.println(nb);
-            pw.println(op);
-            pw.println(nb2);
+            operation=new Calcul(nb,op,nb2);
+            oos.writeObject(operation);
             if(nb!=0){
                 res=Integer.parseInt(bf.readLine());
                 System.out.println("resultat: "+res);

@@ -1,14 +1,15 @@
-# TP 2 : Les sockets en mode connecté TCP — E/R de CC & objets
+# TP 2 : Les sockets en mode connecté TCP : E/R de CC & objets
 
-**Nom et prénom :** Masmoudi Ahmed
+Nom :Masmoudi
 
-## Activité 2-1 : Échange de CC entre Client/Serveur via les Sockets TCP
+Prénom : Ahmed
+## Activité 2-2 : Échange des objets entre Client/Serveur via les Sockets TCP
 
-## Étape 2 : Application des flux de traitement de CC
+## Étape 2 : Implémentation de l’échange d’objets
 
-Nous avons développé les applications Client et Serveur en Java à l’aide des sockets TCP afin de permettre l’échange de chaînes de caractères contenant les éléments d’une opération complète. Le client envoie le premier opérande, l’opérateur et le deuxième opérande au serveur. Le serveur effectue le calcul demandé, puis renvoie le résultat au client, qui le lit et l’affiche. Nous avons également prévu les opérations arithmétiques de base : addition, soustraction, multiplication et division.
-
-![](captures/1.png)
-![](captures/2.png)
-![](captures/3.png)
-![](captures/4.png)
+Cette étape consiste à étendre les applications client/serveur développées dans l’activité précédente en utilisant la sérialisation des objets en Java. Le client envoie un objet contenant les deux opérandes et l’opérateur au serveur, qui effectue le calcul demandé et renvoie le résultat au client pour l’afficher.
+![](captures/5.png)
+![](captures/6.png)
+![](captures/7.png)
+![](captures/8.png)
+![](captures/9.png)
